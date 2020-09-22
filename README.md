@@ -1,5 +1,5 @@
 ## Contact App
-http://indonesia-covid19.surge.sh/
+http://simple-crud-contact.surge.sh/
 
 Simple CRUD Contact App using API https://simple-contact-crud.herokuapp.com/documentation
 

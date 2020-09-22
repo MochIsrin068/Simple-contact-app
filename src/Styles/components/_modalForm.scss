@@ -1,0 +1,130 @@
+.modalCreate{
+    display : flex;
+    flex-direction: column;
+    width: 500px;
+
+    @include phone{
+        width: 320px;
+    }
+
+    &__header{
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        >label{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 14px;
+            color: #000000;
+        }
+
+        >svg{
+            cursor: pointer;
+        }
+    }
+
+
+    &__action{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 10px;
+
+        >label{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 14px;
+            color: #000000;
+            mix-blend-mode: normal;
+            opacity: 0.6;
+            margin-right: 40px;
+            cursor: pointer;
+        }
+
+        >div{
+            align-items: center;
+            padding: 10px 16px;
+            background: rgba(206, 0, 0, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            >svg{
+                margin-right: 8px;
+            }
+
+            >span{
+                color: #CE0000;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 14px;
+                mix-blend-mode: normal;
+                opacity: 0.6;
+            }
+        }
+    }
+
+    &__form{
+        width: 100%;
+        margin-top: 10px;
+
+        &__input{
+            margin-top: 24px;
+            background: rgba(0, 0, 0, 0.03);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            
+            >input{
+                margin: 16px 20px;
+                background-color: transparent;
+
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 14px;
+                color: #000000;
+                mix-blend-mode: normal;
+                opacity: 0.4;
+            }
+
+            >label{
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 14px;
+                color: #000000;
+                mix-blend-mode: normal;
+                opacity: 0.4;
+
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+
+        >button{
+            margin-top: 40px;
+            margin-bottom: 20px;
+            background: linear-gradient(270deg, #8743FF 0%, #4136F1 100%);
+            box-shadow: 0px 15px 30px rgba(20, 102, 204, 0.16);
+            border-radius: 16px;
+            width: 100%;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+    }
+}

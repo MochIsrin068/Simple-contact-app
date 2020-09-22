@@ -1,0 +1,78 @@
+
+.wave{
+    z-index: -2;
+    position: absolute;
+    @include phone{
+        display: none;
+    }
+}
+
+.home{
+    padding: 50px 87px;
+    height: 100vh;
+    
+    @include phone{
+        padding: 50px 0px;
+        width: 100%;
+    }
+
+    &__header{
+        width: 100%;
+        
+        @include phone{
+            padding: 0px 20px;
+        }
+    }
+    
+    &__content{
+        margin-top: 62px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(385px, 1fr));
+        object-fit: cover;
+        column-gap: 10px;
+        row-gap: 28px;
+        justify-content: space-between;
+        padding-left: 12px;
+        // background: linear-gradient(225deg, #8743FF 0%, #4136F1 100%);
+        // border-radius: 16px;
+    }
+    
+    &__emptyState{
+        margin-top: 126px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        >img{
+            width: 20%;
+        }
+
+        >p{
+            margin-top: 10px;
+            font-size: 22px;
+            font-weight: 600;
+        }
+    }
+
+    &__add{
+        position: fixed;
+        bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 49%;
+        width: 56px;
+        height: 56px;
+        background: linear-gradient(225deg, #8743FF 0%, #4136F1 100%);
+        box-shadow: 0px 15px 30px rgba(20, 102, 204, 0.16);
+        border-radius: 28px;
+        transform: rotate(1.42deg);
+        cursor: pointer;
+        
+        @include phone{
+            left: 46%;
+        }
+    }
+}

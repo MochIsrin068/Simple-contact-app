@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Poopins";
+    src: url('../../Assets/fonts/Poppins-Regular.ttf');
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poopins", sans-serif;
+
+    >input:focus{
+        outline: none;        
+    }
+    >input{
+        border: none;
+    }
+
+    >button{
+        border: none;
+    }
+
+    >button:focus{
+        border: none;
+        outline: none;
+    }
+}
+
+body{
+    background-color: #FBFBFB;
+}

@@ -1,0 +1,50 @@
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__input{
+        background-color: #fff;
+        width: 89%;
+        display: flex;
+        align-items: center;
+        filter: drop-shadow(0px 25px 40px rgba(0, 0, 0, 0.03));
+        box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.03);
+        height: 36px;
+        border-radius: 16px;
+        padding: 10px 16px;
+
+        @include phone{
+            width: 72%;
+        }
+
+        >svg{
+            margin-right: 23px;
+        }
+
+        >input{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            color: #000000;
+            mix-blend-mode: normal;
+            opacity: 0.4;
+            width: 100%;
+            border: none;
+        }
+    }
+
+    &__button{
+        width: 10%;
+        filter: drop-shadow(0px 24px 48px rgba(99, 60, 247, 0.15));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(#8743FF, #4136F1);
+        border-radius: 14px;
+        width: 44px;
+        height: 44px;
+        box-shadow: 0px 15px 30px rgba(20, 102, 204, 0.16);
+    }
+}

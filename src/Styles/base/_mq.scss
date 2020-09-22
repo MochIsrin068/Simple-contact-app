@@ -1,0 +1,24 @@
+@mixin phone {
+    @media only screen and (max-width: 599px) { @content; }
+}
+@mixin tablet {
+    @media only screen and (min-width: 600px) { @content; }
+}
+@mixin desktop {
+    @media only screen and (min-width: 1024px) { @content; }
+}
+
+//memanggil atau menggunaan mixin
+
+// .content {
+//     @include phone {
+//         font-size: 10px;
+//     }  
+//     @include tablet {
+//         font-size: 12px;
+//     }
+
+//     @include desktop {
+//         font-size: 14px;
+//     }
+// }

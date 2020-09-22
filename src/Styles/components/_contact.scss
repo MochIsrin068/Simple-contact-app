@@ -1,0 +1,78 @@
+.contact{
+    width: 326px;
+    height: 100px;
+    background: #FFFFFF;
+    box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.03);
+    border-radius: 24px;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    @include phone{
+        width: 346px;
+    }
+
+    &__profile{
+        display: flex;
+        align-items: center;
+
+        &__photo{
+            margin-right: 16px;
+            width: 84px;
+            height: 84px;
+            filter: drop-shadow(0px 20px 60px rgba(0, 0, 0, 0.15));
+            border-radius: 20px;
+            background-color: #FBFBFB;
+        }
+
+        &__name{
+            >label{
+                font-style: normal;
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 14px;
+                color: #000000;
+            }
+
+            >p{
+                margin-top: 6px;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 14px;
+                color: #000000;
+                mix-blend-mode: normal;
+                opacity: 0.6;
+            }
+        }
+    }
+
+    &__action{
+        display: flex;
+        align-items: center;
+
+        &__edit{
+            margin-right: 14px;
+            width: 35px;
+            height: 35px;
+            background: rgba(0, 160, 6, 0.1);
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        &__remove{
+            width: 35px;
+            height: 35px;
+            background: rgba(206, 0, 0, 0.1);
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+}

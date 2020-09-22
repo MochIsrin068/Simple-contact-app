@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, useState} from 'react'
+import './Styles/main.scss'
+import Home from './Pages/Home'
+import API from './Services/API'
+import {connect} from 'react-redux'
+import Types from './Models/Types'
+import {Helmet} from 'react-helmet'
 
-function App() {
+const App  = ({updateContact, contacts}) => {
+  useEffect(() => {
+    API.getContact().then((response) => {
+      if(contacts.length < 1){
+        updateContact({type: Types.UPDATE_CONTACT, newData: response.data})
+      }else{
+        
+      }
+    })
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <> 
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Contact App</title>
+        </Helmet>
+      <Home />
+    </>
+  ) 
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    contacts : state
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    updateContact : dispatch
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
